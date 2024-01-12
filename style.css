@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-top: 5px;
+}
+
+.github-link {
+    position: absolute;
+    top: 20px; /* ヘッダーの上端からの位置 */
+    right: 20px; /* ヘッダーの右端からの位置 */
+    font-size: 40px; /* アイコンのサイズ */
+    color: white; /* アイコンの色 */
+}
+
+.github-link:hover {
+    color: #ccc; /* ホバー時のアイコンの色 */
+}
+
+main {
+    padding: 20px;
+}
+
+
+.memo-container {
+    position: relative;
+    padding-top: 40px; /* タイトルフィールドの高さに合わせて調整 */
+    width: 80%;
+}
+
+#memo-title {
+    width: calc(10% - 20px); /* パディングを考慮した幅 */
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+    left: 0px; /* 左側のパディングを合わせる */
+    z-index: 2; /* テキストエリアより前面に表示 */
+    margin-top: 5px;
+}
+
+#memo {
+    width: 100%;
+    height: 300px; /* 初期の高さを設定 */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    resize: both;
+    overflow: auto;
+
+}
+
+@media (max-width: 440px) {
+
+    #memo-title {
+        width: auto;
+    }
+
+    #memo {
+        width: 100%;        
+    }
+}
