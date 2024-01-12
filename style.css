@@ -22,10 +22,11 @@ header p {
 
 .github-link {
     position: absolute;
-    top: 20px; /* ヘッダーの上端からの位置 */
-    right: 20px; /* ヘッダーの右端からの位置 */
+    top: 30px; /* ヘッダーの上端からの位置 */
+    right: 30px; /* ヘッダーの右端からの位置 */
     font-size: 40px; /* アイコンのサイズ */
     color: white; /* アイコンの色 */
+    display: block;
 }
 
 .github-link:hover {
@@ -63,10 +64,25 @@ main {
     border: 1px solid #ddd;
     resize: both;
     overflow: auto;
-
 }
 
-@media (max-width: 440px) {
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+@media (min-width: 600px) {
+    header .github-link {
+        display: block; /* ヘッダーのリンクは表示 */
+    }
+    footer .github-link {
+        display: none; /* フッターのリンクは非表示 */
+    }
+}
+
+@media (max-width: 430px) {
 
     #memo-title {
         width: auto;
@@ -74,5 +90,14 @@ main {
 
     #memo {
         width: 100%;        
+    }
+
+    header .github-link {
+        display: none; /* ヘッダーのリンクは非表示 */
+    }
+    footer .github-link {
+        display: block; /* フッターのリンクは表示 */
+        font-size: 24px; /* スマホでは少し小さめのアイコンサイズに */
+        padding: 10px 0; /* フッター内で中央に配置 */
     }
 }

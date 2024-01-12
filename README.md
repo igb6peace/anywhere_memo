@@ -1,1 +1,1 @@
-# anywhere_memo
+# https://igb6peace.github.io/anywhere_memo/
