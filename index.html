@@ -223,8 +223,10 @@
       const smallH = Math.max(1, Math.floor(h/px));
 
       // オフスクリーンで小さく描画
-      const off = new OffscreenCanvas ? new OffscreenCanvas(smallW, smallH) : document.createElement('canvas');
-      off.width = smallW; off.height = smallH;
+      const off = document.createElement('canvas');
+off.width = smallW;
+off.height = smallH;
+const octx = off.getContext('2d');
       const octx = off.getContext('2d');
       octx.imageSmoothingEnabled = true; // 小さくするときは補間OK
       octx.drawImage(originalCanvas, 0,0, smallW, smallH);
