@@ -226,7 +226,6 @@
       const off = document.createElement('canvas');
 off.width = smallW;
 off.height = smallH;
-const octx = off.getContext('2d');
       const octx = off.getContext('2d');
       octx.imageSmoothingEnabled = true; // 小さくするときは補間OK
       octx.drawImage(originalCanvas, 0,0, smallW, smallH);
