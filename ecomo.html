@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecomo® | 次世代節電ユニットでコストとCO2を同時に削減</title>
+    <meta name="description" content="特許技術で電力ロスを削減する次世代節電ユニットecomo®。電気代削減、CO2排出量削減、SDGs貢献を実現。工場、スーパー、病院など1200箇所以上の導入実績。まずは無料シミュレーションから。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS & Fonts -->
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background: linear-gradient(180deg, #87CEEB 0%, #90EE90 50%, #FFFFFF 100%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        /* Font Styles */
+        h1 { font-family: 'Inter', sans-serif; font-weight: 900; }
+        h2 { font-family: 'Inter', sans-serif; font-weight: 700; }
+        .font-jp { font-family: 'Noto Sans JP', sans-serif; }
+
+        /* Custom Colors */
+        :root {
+            --color-primary: #0056b3; /* Deep Blue */
+            --color-secondary: #228B22; /* Forest Green */
+            --color-text-dark: #1a1a1a;
+            --color-text-light: #ffffff;
+        }
+
+        /* CTA Button Gradient & Hover */
+        .cta-button {
+            background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Scroll-triggered Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        /* Glassmorphism Effect for Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        /* FAQ Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+
+        /* Case Study Slider */
+        .slider-container {
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        .slider-item {
+            scroll-snap-align: center;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 p-4 bg-white/30 backdrop-blur-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold" style="color: var(--color-primary);">ecomo®</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#what-is" class="hover:text-blue-600 transition">ecomoとは？</a>
+                <a href="#solution" class="hover:text-blue-600 transition">ソリューション</a>
+                <a href="#cases" class="hover:text-blue-600 transition">導入事例</a>
+                <a href="#pricing" class="hover:text-blue-600 transition">価格</a>
+                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+            </div>
+            <a href="#contact" class="cta-button text-white px-6 py-2 rounded-full font-bold">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center text-white px-4 pt-20">
+            <div class="max-w-4xl reveal">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl italic uppercase leading-tight tracking-tighter">
+                    <span class="text-stroke-white" style="-webkit-text-stroke: 1px var(--color-primary); color: transparent;">REDUCE</span> COST.
+                    <span style="color: var(--color-secondary);">SAVE</span> PLANET.
+                </h1>
+                <p class="font-jp text-lg md:text-2xl mt-6 max-w-2xl mx-auto" style="color: var(--color-text-dark);">
+                    特許技術で未来の経営をデザインする。<br class="hidden md:block">次世代節電ユニット「ecomo®」
+                </p>
+                <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="cta-button inline-block text-white px-10 py-4 rounded-full font-bold text-xl">
+                        無料で削減額をシミュレーション
+                    </a>
+                    <a href="#contact" class="cta-button inline-block text-white px-10 py-4 rounded-full font-bold text-xl">
+                        資料請求
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section id="challenges" class="py-20 lg:py-32 bg-white/20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl mb-4 font-jp" style="color: var(--color-text-dark);">その経営課題、<br class="md:hidden"><span style="color: var(--color-primary);">根本から</span>解決しませんか？</h2>
+                <p class="max-w-2xl mx-auto mb-16 font-jp text-gray-600">ecomo®は、目先の対策では解決できない問題を、技術でクリアにします。</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="glass-card p-8 rounded-2xl reveal">
+                        <svg class="w-16 h-16 mx-auto mb-4" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <h3 class="text-2xl font-bold mb-2 font-jp">止まらない電気料金の高騰</h3>
+                        <p class="font-jp text-gray-700">外部要因に左右されない、安定的で予測可能な経営基盤を築きます。</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 0.2s;">
+                         <svg class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.8 13.8a9 9 0 115.4 0M12 21a9 9 0 01-9-9h18a9 9 0 01-9 9z"></path></svg>
+                        <h3 class="text-2xl font-bold mb-2 font-jp">待ったなしのCO2削減義務</h3>
+                        <p class="font-jp text-gray-700">SDGs目標達成に貢献し、取引先や社会からの信頼を高める企業へ。</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 0.4s;">
+                        <svg class="w-16 h-16 mx-auto mb-4" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636l1.414 1.414m10.05 10.05l1.414 1.414M18.364 5.636l-1.414 1.414M5.636 18.364l1.414-1.414"></path></svg>
+                        <h3 class="text-2xl font-bold mb-2 font-jp">打ち手が見えない省エネ対策</h3>
+                        <p class="font-jp text-gray-700">省エネをやり尽くした企業様でも、平均7%のさらなる削減実績があります。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is Ecomo? Section -->
+        <section id="what-is" class="py-20 lg:py-32 bg-white/35">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-5xl mb-4 font-jp" style="color: var(--color-text-dark);">ecomo®とは？</h2>
+                    <p class="max-w-2xl mx-auto mb-16 font-jp text-gray-600">電子部品を一切使わない、鉱物の力を応用した革新的テクノロジーです。</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                    <div class="reveal">
+                        <!-- Visual Representation -->
+                        <div class="relative p-8 rounded-2xl aspect-square flex items-center justify-center bg-white/50 shadow-inner">
+                             <svg class="w-full h-full text-gray-300 opacity-50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#87CEEB" d="M53.5,-53.9C67.8,-42.3,76.8,-21.2,76.5,-0.4C76.2,20.4,66.6,40.8,50.9,53.9C35.2,67,13.4,72.8,-9.5,72.1C-32.4,71.4,-56.4,64.2,-68.8,48.5C-81.2,32.8,-82.1,8.6,-75.6,-12.7C-69.1,-34,-55.2,-52.4,-38.5,-63.9C-21.8,-75.4,-10.9,-80,3.3,-82C17.5,-84.1,35,-82.8,47.8,-73.2" transform="translate(100 100)" />
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center flex-col text-center">
+                                <p class="font-bold text-2xl font-jp" style="color: var(--color-primary);">鉱物の力</p>
+                                <p class="text-sm font-jp text-gray-600">(圧電効果)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal font-jp" style="transition-delay: 0.2s;">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-primary);">特許技術が、電力ロスを削減</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">ecomo®は従来の節電装置とは一線を画します。心臓部には、トルマリン等の鉱物を使用。これらの鉱物が持つ「圧電効果」を利用して微弱な電気（電子）を生成し、電力の流れを整えることで、これまで当たり前だった電力ロスを根本から軽減します。</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="font-bold">電子部品ゼロ：</strong>故障リスクが極めて低く、メンテナンスフリー。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                 <span><strong class="font-bold">高安全性：</strong>本体に電気は流れないため、漏電や火災の心配がありません。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                 <span><strong class="font-bold">持続効果：</strong>鉱物の特性「永久電極」により、半永久的に効果が持続します。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="py-20 lg:py-32 bg-white/50">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-5xl mb-4 font-jp" style="color: var(--color-text-dark);">ecomo®が<span style="color: var(--color-secondary);">選ばれる理由</span></h2>
+                    <p class="max-w-2xl mx-auto mb-16 font-jp text-gray-600">まったく新しい発想で、電力効率を最大化します。</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg reveal">
+                        <h4 class="text-xl font-bold mb-2 font-jp" style="color: var(--color-primary);">特許取得の独自技術</h4>
+                        <p class="font-jp text-gray-700">トルマリン等の鉱物が持つ圧電効果を利用し「電子」を生成。電力の流れを潤滑にし、ロスを根本から軽減します。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg reveal" style="transition-delay: 0.1s;">
+                        <h4 class="text-xl font-bold mb-2 font-jp" style="color: var(--color-primary);">驚異的な高耐久性</h4>
+                        <p class="font-jp text-gray-700">電子部品を一切使用せず、本体に電気が流れない設計。故障リスクが極めて低く、設計寿命15年・7年間の長期保証を実現。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg reveal" style="transition-delay: 0.2s;">
+                        <h4 class="text-xl font-bold mb-2 font-jp" style="color: var(--color-primary);">施設全体をカバー</h4>
+                        <p class="font-jp text-gray-700">動力のトランス単位で設置するため、特定の機器だけでなく、接続されている設備全体の省エネが可能です。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg reveal" style="transition-delay: 0.3s;">
+                        <h4 class="text-xl font-bold mb-2 font-jp" style="color: var(--color-primary);">簡単・迅速な導入</h4>
+                        <p class="font-jp text-gray-700">専門スタッフによる設置工事は約1時間で完了。業務への影響を最小限に抑え、すぐに効果を実感いただけます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="cases" class="py-20 lg:py-32 bg-white/80">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-5xl mb-4 font-jp" style="color: var(--color-text-dark);"><span style="color: var(--color-primary);">1200箇所以上</span>の導入実績</h2>
+                    <p class="max-w-2xl mx-auto mb-16 font-jp text-gray-600">様々な業種で、確かな効果が証明されています。</p>
+                </div>
+                <div class="relative">
+                    <div id="slider" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide slider-container">
+                        <!-- Case 1 -->
+                        <div class="slider-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4 snap-center">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center h-full reveal">
+                                <p class="text-lg font-jp text-gray-500">化学工場</p>
+                                <p class="text-6xl font-black my-4" style="color: var(--color-secondary);">9.0%</p>
+                                <p class="text-2xl font-bold font-jp">平均電力削減</p>
+                            </div>
+                        </div>
+                        <!-- Case 2 -->
+                         <div class="slider-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4 snap-center">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center h-full reveal">
+                                <p class="text-lg font-jp text-gray-500">パッケージ生産</p>
+                                <p class="text-6xl font-black my-4" style="color: var(--color-secondary);">10.6%</p>
+                                <p class="text-2xl font-bold font-jp">平均電力削減</p>
+                            </div>
+                        </div>
+                        <!-- Case 3 -->
+                         <div class="slider-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4 snap-center">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center h-full reveal">
+                                <p class="text-lg font-jp text-gray-500">馬肉専門加工・卸売</p>
+                                <p class="text-6xl font-black my-4" style="color: var(--color-secondary);">15.2%</p>
+                                <p class="text-2xl font-bold font-jp">平均電力削減</p>
+                            </div>
+                        </div>
+                        <!-- Case 4 -->
+                         <div class="slider-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4 snap-center">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center h-full reveal">
+                                <p class="text-lg font-jp text-gray-500">大手自動車部品製造</p>
+                                <p class="text-6xl font-black my-4" style="color: var(--color-secondary);">9.6%</p>
+                                <p class="text-2xl font-bold font-jp">平均電力削減</p>
+                            </div>
+                        </div>
+                         <!-- Case 5 -->
+                         <div class="slider-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4 snap-center">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center h-full reveal">
+                                <p class="text-lg font-jp text-gray-500">印刷会社</p>
+                                <p class="text-6xl font-black my-4" style="color: var(--color-secondary);">10.8%</p>
+                                <p class="text-2xl font-bold font-jp">平均電力削減</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="text-center mt-8">
+                        <button id="prevBtn" class="p-2 m-2 rounded-full bg-white shadow-md">&lt;</button>
+                        <button id="nextBtn" class="p-2 m-2 rounded-full bg-white shadow-md">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl mb-4 font-jp" style="color: var(--color-text-dark);">投資対効果をシミュレーション</h2>
+                <p class="max-w-2xl mx-auto mb-16 font-jp text-gray-600">削減効果は明確な数字となって現れます。※シミュレーション例（削減率7%で算出）</p>
+                <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Plan 1 -->
+                    <div class="border-2 border-gray-200 rounded-2xl p-8 reveal">
+                        <h3 class="text-2xl font-bold font-jp mb-2">旅館・ホテル</h3>
+                        <p class="text-gray-500 font-jp mb-6">（小規模施設）</p>
+                        <p class="text-4xl font-black" style="color: var(--color-primary);">3.3<span class="text-xl font-bold">年</span></p>
+                        <p class="font-jp text-gray-600 mb-6">投資回収</p>
+                        <ul class="text-left space-y-2 font-jp">
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> 投資額目安: ¥720,000</li>
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> 年間削減額: 約 ¥216,000</li>
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> CO2削減量: 年間 5.5t</li>
+                        </ul>
+                    </div>
+                    <!-- Plan 2 (Featured) -->
+                    <div class="border-2 rounded-2xl p-8 relative overflow-hidden ring-4 ring-offset-2" style="border-color: var(--color-secondary); ring-color: var(--color-secondary);"">
+                        <span class="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">おすすめ</span>
+                        <h3 class="text-2xl font-bold font-jp mb-2">スーパーマーケット</h3>
+                        <p class="text-gray-500 font-jp mb-6">（中規模施設）</p>
+                        <p class="text-4xl font-black" style="color: var(--color-primary);">3.2<span class="text-xl font-bold">年</span></p>
+                        <p class="font-jp text-gray-600 mb-6">投資回収</p>
+                        <ul class="text-left space-y-2 font-jp">
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> 投資額目安: ¥2,890,000</li>
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> 年間削減額: 約 ¥917,000</li>
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> CO2削減量: 年間 22.7t</li>
+                        </ul>
+                    </div>
+                    <!-- Plan 3 -->
+                    <div class="border-2 border-gray-200 rounded-2xl p-8 reveal">
+                        <h3 class="text-2xl font-bold font-jp mb-2">工場</h3>
+                        <p class="text-gray-500 font-jp mb-6">（大規模施設）</p>
+                        <p class="text-4xl font-black" style="color: var(--color-primary);">2.8<span class="text-xl font-bold">年</span></p>
+                        <p class="font-jp text-gray-600 mb-6">投資回収</p>
+                        <ul class="text-left space-y-2 font-jp">
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> 投資額目安: ¥8,800,000</li>
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> 年間削減額: 約 ¥3,108,000</li>
+                            <li><span class="font-bold" style="color: var(--color-secondary);">✓</span> CO2削減量: 年間 90.4t</li>
+                        </ul>
+                    </div>
+                </div>
+                 <a href="#contact" class="cta-button inline-block text-white px-10 py-4 rounded-full font-bold text-xl mt-12">
+                    貴社のケースでシミュレーション
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 lg:py-32 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-5xl mb-12 font-jp" style="color: var(--color-text-dark);">よくあるご質問</h2>
+                </div>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item bg-white rounded-lg shadow-sm reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-lg font-bold font-jp">どのような仕組みで節電するのですか？</span>
+                            <span class="accordion-icon text-2xl font-thin">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 font-jp text-gray-700">ecomo®は、コンデンサやICチップなどの電子部品を一切使用していません。内部のトルマリンなどの鉱物が持つ「圧電効果」により微弱な電気（電子）を発生させ、電気の流れをスムーズにすることで、送電・利用時の電力ロスを軽減する特許技術です。</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                     <div class="accordion-item bg-white rounded-lg shadow-sm reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-lg font-bold font-jp">故障やメンテナンスの心配はありませんか？</span>
+                             <span class="accordion-icon text-2xl font-thin">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 font-jp text-gray-700">電子部品がなく、本体に直接電気が流れない構造のため、故障のリスクは極めて低いです。設計寿命は15年と長く、さらに安心の7年間の製品保証をお付けしています。定期的なメンテナンスも不要です。</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 3 -->
+                     <div class="accordion-item bg-white rounded-lg shadow-sm reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-lg font-bold font-jp">本当に効果はありますか？</span>
+                             <span class="accordion-icon text-2xl font-thin">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 font-jp text-gray-700">はい、大手工場から商業施設まで、全国1200箇所以上での導入実績があり、平均3〜15%の削減効果を記録しています。万が一、初回導入後に5%以上の削減効果が出ない場合には、製品代金を全額返金する「削減保証制度」もご用意しておりますので、安心して導入いただけます。</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                     <div class="accordion-item bg-white rounded-lg shadow-sm reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-lg font-bold font-jp">導入工事は大変ですか？</span>
+                             <span class="accordion-icon text-2xl font-thin">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 font-jp text-gray-700">工事は、お客様の施設の停電時間に合わせて実施し、通常1時間程度で完了します。業務への影響を最小限に抑え、迅速に導入することが可能です。移設も簡単に行えます。</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                     <div class="accordion-item bg-white rounded-lg shadow-sm reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-lg font-bold font-jp">導入前に効果を確認できますか？</span>
+                             <span class="accordion-icon text-2xl font-thin">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                             <p class="py-4 font-jp text-gray-700">はい、可能です。まずは「テスト導入」で実際の削減効果をご体感いただいてから、全体導入をご判断いただけます。また、一部機種ではレンタルでの導入もご用意しておりますので、お気軽にご相談ください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer CTA Section -->
+        <section id="contact" class="py-20 lg:py-32 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl mb-4 font-jp" style="color: var(--color-text-dark);">まずは<span style="color: var(--color-primary);">無料シミュレーション・資料請求</span>から。</h2>
+                <p class="max-w-2xl mx-auto mb-12 font-jp text-gray-600">過去1年分の電気料金明細をご用意いただくだけで、貴社の削減ポテンシャルを算出します。</p>
+                <form class="max-w-xl mx-auto space-y-4 reveal">
+                    <input type="text" placeholder="会社名" class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" required>
+                    <input type="text" placeholder="ご担当者名" class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" required>
+                    <input type="email" placeholder="メールアドレス" class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" required>
+                    <input type="tel" placeholder="電話番号" class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+                    <button type="submit" class="w-full cta-button text-white px-10 py-4 rounded-full font-bold text-xl">
+                        相談を予約する
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center font-jp">
+            <p class="mb-2">株式会社WealthPols</p>
+            <p class="text-sm text-gray-400 mb-4">埼玉県熊谷市箱田７丁目3番43号</p>
+            <div class="space-x-4 text-sm">
+                <a href="#" class="hover:underline">会社概要</a>
+                <span>|</span>
+                <a href="#" class="hover:underline">プライバシーポリシー</a>
+            </div>
+            <p class="text-xs text-gray-500 mt-6">&copy; 2025 Wealth Pols INC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Scroll-triggered Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // FAQ Accordion
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                const icon = item.querySelector('.accordion-icon');
+
+                header.addEventListener('click', () => {
+                    const isOpen = content.style.maxHeight;
+
+                    // Close all other accordions
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                            otherItem.querySelector('.accordion-icon').textContent = '+';
+                        }
+                    });
+
+                    if (isOpen) {
+                        content.style.maxHeight = null;
+                        icon.textContent = '+';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.textContent = '-';
+                    }
+                });
+            });
+
+            // Case Study Slider
+            const slider = document.getElementById('slider');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const firstSlide = slider.querySelector('.slider-item');
+
+            if (firstSlide) {
+                const slideWidth = firstSlide.clientWidth;
+
+                nextBtn.addEventListener('click', () => {
+                    slider.scrollLeft += slideWidth;
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    slider.scrollLeft -= slideWidth;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
